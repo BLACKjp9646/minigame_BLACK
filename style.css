@@ -1,0 +1,77 @@
+body{
+    background-color: skyblue;
+    
+}
+header h1{
+text-align: center;
+text-decoration: none;
+}
+header,nav,#contents{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav{
+    background-color: beige;
+}
+nav ul{
+    text-align: center;
+    list-style: none;
+    
+    margin: 0 100px 20px 100px;
+    padding: 10px 0 10px 0;
+    overflow: hidden;
+}
+nav ul li{
+    width: 20%;
+    float: left;
+}
+nav ul li a{
+    display: block;   
+    overflow: hidden
+}
+nav ul li a:link,nav ul li a:visited,nav ul li a:hover,nav ul li a:active, header a:link,header a:visited,header a:hover,header a:active{
+    color: black;
+    text-decoration: none;
+  }
+#omikuji_html:hover,#keisan_html:hover,#gasorin_html:hover,#actlist:hover,#game_html:hover{
+    background-color: gray;
+}
+#contents{
+    background-color: black;
+    color: white;
+}
+.main{
+    background-color: black;
+    color: white;
+    text-align: center;   
+    width: 70%;
+    float: right;
+}
+.main h3{
+    float: left;
+}
+h3 a:link,h3 a:visited,h3 a:hover,h3 a:active {
+    color: white;
+    text-decoration: none;
+  }
+  a:link,a:visited,a:hover,a:active {
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+.sub{
+    background-color: white;
+    color: black;
+    width: 30%;
+    float: left;
+}
+.sub h2{
+    padding-left: 10%;
+}
+/*おみくじの設定*/
+#omikuji{
+    width: auto;
+    background-color: bisque;
+    color: black;
+}

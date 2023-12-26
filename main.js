@@ -1,4 +1,4 @@
-const url = "./change.json";//ファイルの名前
+/*const url = "./change.json";//ファイルの名前
 const option = {"responseType":"blob"};//オプション
 var today = new Date();
 day = "" + today.getFullYear() + "/" +(today.getMonth()+1)+"/"+(today.getDate()) 
@@ -32,4 +32,4 @@ $("#upload").click(()=>{
         })
     })
 })
-})
+})*/

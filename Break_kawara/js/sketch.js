@@ -14,7 +14,7 @@ let gameScreenSelect=96011;//ゲーム画面遷移用変数
 
 let ClickHelp=1;
 let landx,landy,BreakCount=0,kawaraHP=10,kawarapreHP=10;
-let GameTimer=2*60;//ミニゲームの時間=実際の時間xフレームレート60
+let GameTimer=60*60;//ミニゲームの時間=実際の時間xフレームレート60
 let BreakPower=1;
 let BreakStamina=10;
 
@@ -117,9 +117,9 @@ if(ClickHelp>=1){
 		textSize(36);
 		fill(0);
 		text("ゲーム名",windowWidth/2-150,200);//ゲーム名をここに入れる、長さに応じて150のところで横位置調整
-		text("瓦をクリックしてたくさん壊そう！",100,300);
-		text("壊した枚数が多ければ多いほど報酬UP！",100,350);
-		text("画面クリックでゲームスタート",175,450);
+		text("瓦をクリックしてたくさん壊そう！",windowWidth/2-500,300);
+		text("壊した枚数が多ければ多いほど報酬UP！",windowWidth/2-500,350);
+		text("画面クリックでゲームスタート",windowWidth/2-300,450);
 	}
 	else if(gameScreenSelect==96012){//リザルト
 		kawara.visible=false;//スプライトの非表示
@@ -130,13 +130,13 @@ if(ClickHelp>=1){
 		else{
 			textSize(36);
 		fill(0);
-		text("結果発表！",350,200);
-		text("割った瓦の枚数    " + BreakCount,100,250);
-		if(BreakCount>=50){text("クリアランク    S",100,300);text("手に入れた餌   ？？＋5",200,400);}
-		else if(BreakCount>=40){text("クリアランク    A",100,300);text("手に入れた餌   ？？＋4",200,400);}
-		else if(BreakCount>=30){text("クリアランク    B",100,300);text("手に入れた餌   ？？＋3",200,400);}
-		else{text("クリアランク    C",100,300);text("手に入れた餌   ？？＋１",200,400);}
-		text("やめる",250,475);text("もう一度！",450,475);
+		text("結果発表！",windowWidth/2-150,200);
+		text("割った瓦の枚数    " + BreakCount,windowWidth/2-500,250);
+		if(BreakCount>=50){text("クリアランク    S",windowWidth/2-500,300);text("手に入れた餌   ？？＋5",windowWidth/2-500,400);}
+		else if(BreakCount>=40){text("クリアランク    A",windowWidth/2-500,300);text("手に入れた餌   ？？＋4",windowWidth/2-500,400);}
+		else if(BreakCount>=30){text("クリアランク    B",windowWidth/2-500,300);text("手に入れた餌   ？？＋3",windowWidth/2-500,400);}
+		else{text("クリアランク    C",windowWidth/2-500,300);text("手に入れた餌   ？？＋１",windowWidth/2-500,400);}
+		text("やめる",windowWidth/2-450,475);text("もう一度！",windowWidth/2,475);
 		}
 		
 	}
@@ -197,7 +197,7 @@ else if(gameScreenSelect==96012){
 	landx=random(kawara.x-kawara.width+(kawara.width/2.5),kawara.x+kawara.width-(kawara.width/2.5));//ウィークポイント用x乱数設定
 	landy=random(kawara.y-kawara.height+(kawara.height/2.5),kawara.y+kawara.height-(kawara.height/2.5));//ウィークポイント用y乱数設定
 }
-else if(mpx>=windowWidth/2-300&&mpx<windowWidth/2&&mpy>=400&&mpy<=500){
+else if(mpx>=200&&mpx<windowWidth/2&&mpy>=400&&mpy<=500){
 	//やめるが押された時の設定
 	console.log("やめる設定")
 }

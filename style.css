@@ -34,7 +34,7 @@ nav ul li a:link,nav ul li a:visited,nav ul li a:hover,nav ul li a:active, heade
     color: black;
     text-decoration: none;
   }
-#omikuji_html:hover,#keisan_html:hover,#gasorin_html:hover,#actlist:hover,#game_html:hover{
+#page_nav ul li:hover{
     background-color: gray;
 }
 #contents{

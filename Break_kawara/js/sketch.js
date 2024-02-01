@@ -4,9 +4,12 @@ int = x1=0,x2=0,x3=0,x4=0,x5=0,x6=0,y1=0,y2=0,y3=0,y4=0,y5=0,y6=0;
 let audio;//音声設定用変数
 //画像の設定
 const panelImage = "./images/screen.png";
+const hibiwareImage = "./images/hibiware.png";
 let img_1 = null;
+let img_2 = null;
 function preload(){
-  img_1 = loadImage(panelImage);    //画像の読み込み
+  img_1 = loadImage(panelImage);
+  img_2 = loadImage(hibiwareImage);    //画像の読み込み
 }
 /*ゲーム画面の遷移
   96010でゲーム本体、96011でゲームの説明、96012でリザルト*/
@@ -58,7 +61,7 @@ y6 = 310;
 
 	//ウィークポイントの設定
 	landx=random((kawara.x-kawara.width/2)+(kawara.width/5),(kawara.x+kawara.width/2)-(kawara.width/5));//ウィークポイント用x乱数設定
-	landy=random((kawara.y-kawara.height/2)+(kawara.height/5),(kawara.y+kawara.height/2)-(kawara.height/5));//ウィークポイント用x乱数設定
+	landy=random((kawara.y-kawara.height/2)+(kawara.height/5),(kawara.y+kawara.height/2)-(kawara.height/5));//ウィークポイント用y乱数設定
 }
 
 function draw(){
@@ -91,6 +94,10 @@ function draw(){
 	//0枚になったら10枚に戻す
 if(nowkawaraCount<=0){
 	nowkawaraCount=10;
+}
+kawara.draw();
+if(kawaraHP<=5){
+	image(img_2,kawara.x-kawara.width/2,kawara.y-kawara.height/2,kawara.width,kawara.height);//ひび割れ描画
 }
 textSize(20);
 fill(0)
